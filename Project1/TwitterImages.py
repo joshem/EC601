@@ -21,15 +21,15 @@ try:
 		if(len(media)>0):
 			myPics.append(media[0]['media_url'])
 	print(myPics)
-	cnt = 0000
+	cnt = 7000
 
 	for pic in myPics:
-		picPath = "/home/josh/Desktop/EC601/Project1/TwitterPics"
+		picPath = "./TwitterPics/TwitPic"
 		cntStr = str(cnt)
 		extension = ".jpg"
 		newPicPath = picPath + cntStr + extension
 		wget.download(pic,newPicPath)
 		cnt = cnt + 1
 except:
-	print("Wasn't unable to get pictures from Twitter.  Possibe considerations: Twitter is down, incorrect access key, or something else.")
+	print("Wasn't unable to get pictures from Twitter.  Possibe considerations: Twitter is down, incorrect access key, or something else.g")
 	
