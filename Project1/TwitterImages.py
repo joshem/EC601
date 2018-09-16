@@ -18,7 +18,7 @@ try:
 	#extract the photos from these Tweets
 	myPics = []
 	for tweet in myTweets:
-		media = tweet.entities.get('media'git,[])
+		media = tweet.entities.get('media',[])
 		if(len(media)>0):
 			myPics.append(media[0]['media_url'])
 	print(myPics)
