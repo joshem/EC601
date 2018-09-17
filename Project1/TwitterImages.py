@@ -1,12 +1,12 @@
 import tweepy
-from tweepy import OAuthHandler
+#from tweepy import OAuthHandler
 import sys
 import wget
 import json
 
 import getPassword
 myScreenname = 'JoshMan63909666'
-twitCnt = 10
+twitCnt = 20
 #put it all in try-except block for error handling
 try:
 	#OAuthHandler stuff
@@ -21,10 +21,10 @@ try:
 		media = tweet.entities.get('media',[])
 		if(len(media)>0):
 			myPics.append(media[0]['media_url'])
-	print(myPics)
+	#print(myPics)
 	#using wget, download these pics into a folder, using a standardized naming system
 	#standardized naming allows for predictable file names, makes iteration easier in later sections
-	cnt = 7000
+	cnt = 100
 	for pic in myPics:
 		picPath = "./TwitterPics/TwitPic"
 		cntStr = str(cnt)

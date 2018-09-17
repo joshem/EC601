@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-firstPicture = "twitterimage000.jpg"
-if[ -f 
-ffmpeg -f image2 -i image%d.jpg imagestovideo.mpg
-
