@@ -2,7 +2,7 @@ import io
 import os
 from google.cloud import vision
 from google.cloud.vision import types
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/josh/Desktop/googleCreds.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/josh/Desktop/googleCreds.json" #change this to your path
 client= vision.ImageAnnotatorClient()
 print ("outside loop");
 picCnt=100
