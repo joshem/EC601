@@ -12,26 +12,32 @@ try:
 	#OAuthHandler stuff
 	auth = tweepy.OAuthHandler(getPassword.API_KEY, getPassword.API_SECRET_KEY)
 	auth.set_access_token(getPassword.ACCESS_TOKEN, getPassword.ACCESS_TOKEN_SECRET)
-	myAccnt = tweepy.API(auth)
-	#grab tweets from my account
-	myTweets = myAccnt.user_timeline(screen_name=myScreenname,count=twitCnt)
-	#extract the photos from these Tweets
-	myPics = []
+except:
+	print ("Can't connect to Twitter API. Consider checking your API keys?")
+	return
+myAccnt = tweepy.API(auth)
+#grab tweets from my account
+myTweets = myAccnt.user_timeline(screen_name=myScreenname,count=twitCnt)
+#extract the photos from these Tweets
+myPics = []
+try:
 	for tweet in myTweets:
 		media = tweet.entities.get('media',[])
 		if(len(media)>0):
 			myPics.append(media[0]['media_url'])
+except:
+	print("Error retrieving images from Twitter. Possible reasons: invalid Twitter account, internet connection, no images tied to account, etc.")
 	#print(myPics)
 	#using wget, download these pics into a folder, using a standardized naming system
 	#standardized naming allows for predictable file names, makes iteration easier in later sections
-	cnt = 100
-	for pic in myPics:
-		picPath = "./TwitterPics/TwitPic"
-		cntStr = str(cnt)
-		extension = ".jpg"
-		newPicPath = picPath + cntStr + extension
-		wget.download(pic,newPicPath)
-		cnt = cnt + 1
-except:
-	print("Wasn't unable to get pictures from Twitter.  Possibe considerations: Twitter is down, incorrect access key, or something else.g")
+cnt = 100
+for pic in myPics:
+	picPath = "./TwitterPics/TwitPic"
+	cntStr = str(cnt)
+	extension = ".jpg"
+	newPicPath = picPath + cntStr + extension
+	wget.download(pic,newPicPath)
+	cnt = cnt + 1
+
+		
 	

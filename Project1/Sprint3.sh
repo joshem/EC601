@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 #run twitter api program
+./clean.sh
 python3 TwitterImages.py
 cd TwitterPics/
 pwd
