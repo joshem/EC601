@@ -14,7 +14,7 @@ try:
 	auth.set_access_token(getPassword.ACCESS_TOKEN, getPassword.ACCESS_TOKEN_SECRET)
 except:
 	print ("Can't connect to Twitter API. Consider checking your API keys?")
-	return
+	sys.exit(0)
 myAccnt = tweepy.API(auth)
 #grab tweets from my account
 myTweets = myAccnt.user_timeline(screen_name=myScreenname,count=twitCnt)
@@ -27,6 +27,7 @@ try:
 			myPics.append(media[0]['media_url'])
 except:
 	print("Error retrieving images from Twitter. Possible reasons: invalid Twitter account, internet connection, no images tied to account, etc.")
+	sys.exit(0)
 	#print(myPics)
 	#using wget, download these pics into a folder, using a standardized naming system
 	#standardized naming allows for predictable file names, makes iteration easier in later sections
