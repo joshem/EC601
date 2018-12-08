@@ -5,7 +5,7 @@
 python3 TwitterImages.py  $1
 cd TwitterPics/
 pwd
-myPicture = "TwitPic100.jpg"
+myPicture="TwitPic100.jpg"
 #if file doesn't exist
 if [ -f ${myPicture} ]; then
 	#ffmpeg -framerate 1/5 -start_number 1000 -i twitterimage%04d.jpg -c:v libx264 -r 30 -pix_fmt yuv420p out.mp4

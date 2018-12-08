@@ -4,7 +4,7 @@ from google.cloud import vision
 from google.cloud.vision import types
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/home/josh/Desktop/googleCreds.json" #change this to your path
 client= vision.ImageAnnotatorClient()
-print ("outside loop");
+#print ("outside loop");
 picCnt=100
 extension=".jpg"
 
@@ -25,9 +25,11 @@ while(picCnt<10000):
 		labels = response.label_annotations
 
 		picNum = picCnt - 7000
-		print("description of picture with path",filePath,"is: ")
+		#print("description of picture with path",filePath,"is: ")
+		
 		for label in labels:
 			print(label.description)
+		print(" ")
 	except:
 		print("Something went wrong")
 		break

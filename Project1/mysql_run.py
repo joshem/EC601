@@ -25,3 +25,6 @@ print(cnt)
 pop = sqlAPI.popular()
 print(pop)
 
+key = sqlAPI.search('fun')
+print(key)
+

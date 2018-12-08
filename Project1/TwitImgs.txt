@@ -1,5 +1,3 @@
-outside loop
-description of picture with path ./TwitterPics/TwitPic100.jpg is: 
 dog
 bernese mountain dog
 dog like mammal
@@ -10,7 +8,7 @@ greater swiss mountain dog
 appenzeller sennenhund
 companion dog
 carnivoran
-description of picture with path ./TwitterPics/TwitPic101.jpg is: 
+ 
 facial expression
 person
 smile
@@ -18,15 +16,15 @@ music artist
 television presenter
 laughter
 singer
-description of picture with path ./TwitterPics/TwitPic102.jpg is: 
+ 
 fun
-description of picture with path ./TwitterPics/TwitPic103.jpg is: 
+ 
 sports
 arm
 racquet sport
 tennis player
 tennis
-description of picture with path ./TwitterPics/TwitPic104.jpg is: 
+ 
 face
 facial expression
 child
@@ -37,7 +35,7 @@ head
 emotion
 boy
 forehead
-description of picture with path ./TwitterPics/TwitPic105.jpg is: 
+ 
 water
 mammal
 marine mammal
@@ -48,7 +46,7 @@ short beaked common dolphin
 sea
 wholphin
 tucuxi
-description of picture with path ./TwitterPics/TwitPic106.jpg is: 
+ 
 air sports
 sky
 parachuting
@@ -59,7 +57,7 @@ tandem skydiving
 fun
 cloud
 adventure
-description of picture with path ./TwitterPics/TwitPic107.jpg is: 
+ 
 beach
 body of water
 swimwear
@@ -70,8 +68,9 @@ fun
 sun tanning
 summer
 shore
-description of picture with path ./TwitterPics/TwitPic108.jpg is: 
+ 
 sitting
 furniture
 girl
 communication
+ 
