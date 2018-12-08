@@ -6,8 +6,7 @@ import json
 
 import getPassword
 myScreenname = 'JoshMan63909666' #screen name variable
-twitCnt = sys.argv[1]
-print("is the thingy " + sys.argv[1])
+twitCnt = 20
 #put it all in try-except block for error handling
 try:
 	#OAuthHandler stuff

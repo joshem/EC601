@@ -2,7 +2,7 @@
 
 #run twitter api program
 ./clean.sh
-python3 TwitterImages.py $1
+python3 TwitterImages.py  $1
 cd TwitterPics/
 pwd
 myPicture = "TwitPic100.jpg"
