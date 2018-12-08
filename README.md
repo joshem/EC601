@@ -4,5 +4,7 @@ For this project, please do the following:
 3. If you want to grab from another user, change the myscreenname variable within TwitterImages.py
 4. Run the final sprint shell script after all of this has been complete.
 
-### I requested an extension for this project due to computer problems (it was in the shop getting fixed for some unfortunate damage)..Professor Osama never specified a date, but I will be done by Saturday. Please email me if this needs to be discussed, at joshe@bu.edu
+'''
+I requested an extension for this project due to computer problems (it was in the shop getting fixed for some unfortunate damage)..Professor Osama never specified a date, but I will be done by Saturday. Please email me if this needs to be discussed, at joshe@bu.edu
+'''
 
