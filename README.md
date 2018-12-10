@@ -45,9 +45,15 @@ pip3 install pymongo
 ```
 If you run into connection problems while running anything, this link may be of assistance.  I personally encounterred trouble with simple pymongo application: https://askubuntu.com/questions/884541/cant-start-mongodb-service. Note that to undo installation, run ```sudo apt purge mongodb*```.  This will remove any instances, and then simply follow those instructions.
 
+To clean out the Mongo DB (which is already initialized), please just run ```python3 mongoAPI.py``` and answer yes to the question given.  Please note that this cannout be undone.
 
+To run some basic example programs as suggested by this project's coordinator, please enter the following:
 
-###### I requested an extension for this project due to computer problems (it was in the shop getting fixed for some unfortunate damage)..Professor Osama never specified a date, but I will be done by Saturday. Please email me if this needs to be discussed, at joshe@bu.edu
+```python3 mongo_run.py```
+
+As before, the mongoAPI.py file contains the mongo API functionality.  Please feel free to use this if you find it interesting!
+
+###### I requested an extension for this project due to computer problems (it was in the shop getting fixed for some unfortunate damage)..Professor Osama never specified a date, but I will be done by Monday (12/10/2018). Please email me if this needs to be discussed, at joshe@bu.edu
 
 
 
