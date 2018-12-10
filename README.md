@@ -5,7 +5,10 @@ This project builds off of the first project, of which this is a branch of.  To 
 Please refer to the master branch for instructions on how to setup a working prototype.
 
 ## Installation
+
+### SQL
 ```
+sudo apt update
 sudo apt remove --purge mysql*
 sudo apt install mysql-server mysql-common mysql-client
 pip3 install mysql-connector-python
@@ -24,6 +27,16 @@ To initialize and/or clean your databse:
 python3 init_sql.py
 ```
 You will be given an input instruction, and enter the one you would like to do.
+
+
+### MongoDB
+
+```
+sudo apt update
+sudo apt install mongodb
+pip3 install pymongo
+```
+
 
 
 
