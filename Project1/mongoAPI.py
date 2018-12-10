@@ -3,7 +3,7 @@ import datetime
 import operator
 
 def new_session(username, numimg, desc):
-	myclient = pymongo.MongoClient("mongodv://localhost:27017/")
+	myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 	db = myclient["miniproject3"]
 	col = db["username"]
 	now = datetime.datetime.now()
@@ -13,23 +13,23 @@ def new_session(username, numimg, desc):
 	print(tmp.inserted_id)
 
 def user_count():
-	myclient = pymongo.MongoClient("mongodv://localhost:27017/")
+	myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 	db = myclient["miniproject3"]
 	col = db["username"]
-	cnt = []
-	for i in col.find():
-		if(x['username'] in cnt:
-			cnt[x['username']] = str(int(cnt[x['username']]) + int(x['imgs']))
+	cnt = {}
+	for c in col.find():
+		if(c['username'] in cnt):
+			cnt[c['username']] = str(int(cnt[c['username']]) + int(c['imgs']))
 		else:
-			cnt[x['username']] = x['numimg']
+			cnt[c['username']] = c['imgs']
 	return cnt
 	
-def pareser(desc):
+def parser(desc):
 	ret_desc = []
 	tmp_word = ""
 	for d in desc:
 		if (d != ",") and (d !=" "):
-			tmp_word = tmp_word + i
+			tmp_word = tmp_word + d
 		else:
 			if(tmp_word != ""):
 				ret_desc.append(tmp_word)
@@ -38,7 +38,7 @@ def pareser(desc):
 	return ret_desc
 
 def popular():
-	myclient = pymongo.MongoClient("mongodv://localhost:27017/")
+	myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 	db = myclient["miniproject3"]
 	col = db["username"]
 	desc = {}
@@ -54,18 +54,22 @@ def popular():
 		return sort_desc
 		
 def search(key):
-	myclient = pymongo.MongoClient("mongodv://localhost:27017/")
+	myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 	db = myclient["miniproject3"]
 	col = db["username"]
 	keyUser = {}
 	for col in col.find():
-		if(key in col['describers']:
-			if(col['username'] in keyUser:
+		if(key in col['describers']):
+			if(col['username'] in keyUser):
 				keyUser[col['username']].append(col['daytime'])
 			else:
 				keyUser[col['username']] = []
 				keyUser[col['username']].append(col['daytime'])
 	return keyUser
 	
+
+	
+	
+
 	
 	

@@ -3,10 +3,9 @@ import sys
 import mongoAPI
 
 user = input("Your username: ")
-num  = input("Num o pics to downlaod: ")
-
-comand = "./FinalScript.sh"
-os.system(comand)
+num  = input("Num of pics to downlaod: ")
+os.system("PATH=.:$PATH")
+os.system("./FinalSprint.sh " + num)
 
 words = open("TwitImgs.txt").read().splitlines()
 describers = ""
