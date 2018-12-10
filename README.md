@@ -1,10 +1,10 @@
-#E601 Mini Project 3
+# E601 Mini Project 3
 This project builds off of the first project, of which this is a branch of.  To explain, the original project used the Twitter API and Google Vission API to grab pictures off of a feed, convert them to a slideshow and then create descriptions of them.  This branch implements a mongoDB and mySQL implementation as well.
 
-##Setup
+## Setup
 Please refer to the master branch for instructions on how to setup a working prototype.
 
-##Installation
+## Installation
 ```
 sudo apt remove --purge mysql*
 sudo apt install mysql-server mysql-common mysql-client
