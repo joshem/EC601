@@ -6,9 +6,9 @@ import sys
 import sqlAPI
 
 user = input("Your username: ")
-num  = input("Num o pics to downlaod: ")
-
-os.system("./FinalSprint.sh" + num)
+num  = input("Num of pics to downlaod: ")
+os.system("PATH=.:$PATH")
+os.system("./FinalSprint.sh " + num)
 
 words = open("TwitImgs.txt").read().splitlines()
 describers = ""

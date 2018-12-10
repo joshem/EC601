@@ -1,3 +1,7 @@
+import mysql.connector
+import operator
+import datetime
+
 def new_session(user, imgnum, des):
 	connect = mysql.connector.connect(user='josh',password='password',host='localhost',database='MINIPROEJECT3')
 	mycur = connect.cursor(buffered=True)
@@ -23,7 +27,7 @@ def user_count():
 	userCnt = {}
 	for c in imgcnt:
 		if(c[0] in userCnt):
-			userCnt[c[0]] = str(int(userCnt[c[0]]) int(c[2]))
+			userCnt[c[0]] = str(int(userCnt[c[0]]) + int(c[2]))
 		else:
 			userCnt[c[0]] = c[2]
 	return userCnt
@@ -32,13 +36,13 @@ def parser(des):
 	newD = []
 	tmpS = ""
 	for d in des:
-		if(d != ",") and (i != " "):
-			tmp = tmp + d
+		if(d != ",") and (d != " "):
+			tmpS = tmpS + d
 		else:
-			if(tmp != ""):
-				newD.append(tmp)
-			tmp = "" #reinit
-	newD.append(tmp) #last bit
+			if(tmpS != ""):
+				newD.append(tmpS)
+			tmpS = "" #reinit
+	newD.append(tmpS) #last bit
 	return newD
 
 def popular():
@@ -71,14 +75,14 @@ def search(key):
 	except:
 		pass
 	cmd = "SELECT * FROM users"
-	mycur.exuect(cmd)
+	mycur.execute(cmd)
 	res = mycur.fetchall()
 	keyUser = {}
-	for key in res:
-		if(key in key[3]):
+	for r in res:
+		if(key in r[3]):
 			if(key[0] in keyUser):
-				keyUser[key[0]].append(key[1])
+				keyUser[r[0]].append(r[1])
 			else:
-				keyUser[x[0]]=[]
-				keyUser[x[0]].append(x[1])
+				keyUser[r[0]]=[]
+				keyUser[r[0]].append(r[1])
 	return keyUser
