@@ -28,6 +28,13 @@ python3 init_sql.py
 ```
 You will be given an input instruction, and enter the one you would like to do.
 
+To run a series of executions of suggested API implementations, run the following:
+```
+python3 mysql_run.py
+```
+This utilizes an API implemented, entitled simply sqlAPI.py.  To utilize this in your projects, you may copy the file into your directory and have ```import sqlAPI``` into your python program.  You may of course change the title, but do always keep a record of where you got this from :)
+
+
 
 ### MongoDB
 
