@@ -67,9 +67,18 @@ def search(key):
 				keyUser[col['username']].append(col['daytime'])
 	return keyUser
 	
+def clean():
+	myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+	mydb = myclient["miniproject3"]
+	mycol = mydb["username"]
+	mycol.drop()
 
 	
-	
-
-	
+if __name__ == '__main__':
+	action = input("This will clean out your mongoDB instance. This CANNOT be undone. Are you sure?: ")
+	action = str(action)
+	if (action == "Yes" or action=="yes"):
+		clean()
+	else:
+		print("DB not cleaned out.  Please enter Yes to do so.")
 	
