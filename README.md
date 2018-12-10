@@ -43,7 +43,7 @@ sudo apt update
 sudo apt install mongodb
 pip3 install pymongo
 ```
-
+If you run into connection problems while running anything, this link may be of assistance.  I personally encounterred trouble with simple pymongo application: https://askubuntu.com/questions/884541/cant-start-mongodb-service. Note that to undo installation, run ```sudo apt purge mongodb*```.  This will remove any instances, and then simply follow those instructions.
 
 
 
