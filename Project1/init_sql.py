@@ -14,10 +14,12 @@ def clean():
 		pass
 		
 if __name__=="__main__":
-	argStr = str(sys.argv[1])
-	if(argStr == "run"):
+	action = input("Would you like to create or clean the databse? \nEnter 'Clean' to clean or 'Create' to create: ")
+	action = str(action)
+	#argStr = str(sys.argv[1])
+	if(action == "Create"):
 		make()
-	elif(argStr == "clean"):
+	elif(action == "Clean"):
 		clean()
 	else:
 		print("invalid input")
