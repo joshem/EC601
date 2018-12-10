@@ -4,7 +4,7 @@ This project builds off of the first project, of which this is a branch of.  To 
 ## Setup
 Please refer to the master branch for instructions on how to setup a working prototype.
 
-## Installation
+## Installation and Running
 
 ### SQL
 ```
